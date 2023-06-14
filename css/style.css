@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #trailer {
@@ -48,6 +48,18 @@ body:hover>#trailer {
   opacity: 1;
 }
 
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  /* outline: 1px solid slategrey; */
+}
 
 /* #trailer:not([data-type=""])>#trailer-text {
   opacity: 1;
@@ -64,6 +76,7 @@ body:hover>#trailer {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 h1,
@@ -72,7 +85,7 @@ h3,
 a,
 p,
 span {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
   color: white;
   margin: 0px;
@@ -196,6 +209,7 @@ nav .nav-section {
 #nav-logo-section {
   flex-basis: calc(100% / 3);
   justify-content: flex-start;
+  
 }
 
 #nav-logo-section>a>i {
@@ -205,6 +219,8 @@ nav .nav-section {
 #nav-link-section {
   flex-basis: 33.5%;
   gap: 5rem;
+  font-size: 1.14em;
+  letter-spacing: 2px;
 }
 
 #nav-social-section {
@@ -214,7 +230,6 @@ nav .nav-section {
 main {
   flex-grow: 1;
   position: relative;
-  overflow: hidden;
 }
 
 main>article {
@@ -422,6 +437,142 @@ main>article>.article-nav-section>.article-nav-button:hover {
 main>article>.article-nav-section>.article-nav-button:nth-child(2) {
   border-left: 1px solid var(--border-color);
 }
+.intro{
+ margin-top: 9em;
+ margin-left: 10em;
+ cursor:default;
+ width: 38%;
+}
+
+.textone{
+  font-size: 1.9em;
+  text-align: start;
+}
+
+.texttwo, .textthree{
+  
+  padding-top: 30px;
+  font-size: 1.3em;
+  text-align: start;
+  filter: invert(0.4);
+}
+
+.imagediv{
+
+  padding-top: 1em;
+  background-color: aqua;
+  width: 29em;
+  height: 45em;
+  border-top-left-radius: 1000rem;
+  border-top-right-radius: 1000rem;
+  background-image: url("../images/profile.jpg");
+  background-position:47%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+/* .aboutinfo{
+  height: 30px;
+  line-height: 50px;
+  margin-bottom: 1em;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+} */
+
+@keyframes marquee {
+  0% {
+    left:100%;
+  }
+  100% {
+    left: -100%
+  }
+}
+
+.firstrow{
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  margin-top: 5em;
+  margin-right: 10em;
+  margin-bottom: 10em;
+
+}
+.text-wrapper{
+  display: flex;
+  overflow: hidden;
+}
+
+.text-wrapper > h1{
+  font-size: 48px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0 6rem;
+  letter-spacing: 1px;
+  animation: moveside 10s linear infinite;
+}
+
+@keyframes moveside {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+footer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  position:static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-family: 'EB Garamond', serif;
+}
+
+
+.footer-left {
+  padding-left: 1rem;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.footer-left >a{
+  color: white;
+  font-family: 'EB Garamond', serif;
+  filter:invert(0.4)
+}
+.footer-left>a:hover{
+  filter: invert(0);
+}
+
+
+.footer-right {
+  padding-right: 1rem;
+  text-align: right;
+  font-size: 0.9em;
+  
+}
+.footer-right >a{
+  color: white;
+  font-family: 'EB Garamond', serif;
+  filter:invert(0.4)
+}
+
+.footer-right>a:hover{
+  filter: invert(0);
+}
 
 @media(max-width: 1200px) {
   #nav-mobile-section {
@@ -439,6 +590,18 @@ main>article>.article-nav-section>.article-nav-button:nth-child(2) {
 
   main {
     overflow-y: auto;
+  }
+  body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    /* outline: 1px solid slategrey; */
   }
 
   main>article {
