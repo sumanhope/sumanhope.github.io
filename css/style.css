@@ -77,6 +77,7 @@ body::-webkit-scrollbar-thumb {
 * {
   box-sizing: border-box;
   margin: 0;
+  
 }
 
 h1,
@@ -138,6 +139,44 @@ a:hover {
   transition: transform 0.5s ease;
   color: rgb(238, 238, 238);
 }
+.text-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  height: 5em;
+}
+
+.default-text, .hover-text {
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  font-size: 4.5em;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 100;
+}
+
+.default-text {
+  transform: translateY(0);
+}
+
+.hover-text {
+  opacity: 0;
+  transform: translateY(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.article-title-section:hover .default-text {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.article-title-section:hover .hover-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .article-description-section:hover .hand {
   transform: rotateZ(80deg);
   top: -10px;
@@ -285,38 +324,46 @@ main>article>.article-title-section,
 main>article>.article-nav-section {
   border-top: 1px solid var(--border-color);
 }
+main>article:first-child>.articleindex-image-section {
+  background-image: url("../images/indexcover.svg");
+}
 
 main>article:first-child>.article-image-section {
-  background-image: url("../images/hillsone.jpg");
+  background-image: url("../images/Frame.svg");
 }
 
 main>article:nth-child(2)>.article-image-section {
-  background-image: url("../images/hillstwo.jpg");
+  background-image: url("../images/underconstruction.svg");
 }
 
 main>article:nth-child(3)>.article-image-section {
-  background-image: url("../images/park.jpg");
+  background-image: url("../images/underconstruction.svg");
 }
 
 main>article:nth-child(4)>.article-image-section {
-  background-image: url("../images/third.jpg");
+  background-image: url("../images/underconstruction.svg");
 }
 
-main>article>.article-image-section {
+main>article>.articleindex-image-section {
   background-position: center;
-  background-size: cover;
-  height: 27rem;
+  background-size:cover;
+  height: 28rem;
+}
+main>article>.article-image-section {
+  background-position: end;
+  background-size:cover;
+  height: 28rem;
 }
 
 main>article>.article-description-section {
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 4rem;
+  justify-content:end;
+  padding: 2rem;
 }
 
 main>article>.article-description-section>p {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 20px;
+  color: rgba(255, 255, 255, 0.877);
+  font-size: 1.1rem;
 }
 
 main>article>.article-description-section>p>a:hover {
@@ -329,6 +376,7 @@ main>article>.article-title-section {
   justify-content: space-between;
   padding: 2rem 4rem;
 }
+
 
 main>article>.article-work-section {
   align-items: center;
@@ -343,7 +391,7 @@ main>article>.article-work-section * {
 
 main>article>.article-work-section>h2 {
   flex-basis: 50%;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 3.5rem;
   line-height: 3rem;
   margin: 0px;
@@ -382,7 +430,7 @@ main>article>.article-title-section * {
 
 main>article>.article-title-section>h2 {
   flex-basis: 50%;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 3.5rem;
   line-height: 3rem;
   margin: 0px;
@@ -466,8 +514,9 @@ main>article>.article-nav-section>.article-nav-button:nth-child(2) {
   border-top-left-radius: 1000rem;
   border-top-right-radius: 1000rem;
   background-image: url("../images/profile.jpg");
-  background-position:47%;
-  background-size: cover;
+  background-position:49%;
+  background-size:cover;
+ 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -613,6 +662,7 @@ footer {
   main>article>.article-title-section>h2 {
     font-size: 3rem;
     line-height: 2.6rem;
+
   }
 
   main>article>.article-title-section>i {

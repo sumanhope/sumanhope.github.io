@@ -1,118 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work | Suman Shrestha</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work | Suman Shrestha</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <script src="scripts/main.js"></script>
+    <script src="scripts/trailer.js"></script>
+    <script src="scripts/texteffect.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+    </style>
+  </head>
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet"
-    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-  <script src="scripts/main.js"></script>
-  <script src="scripts/trailer.js"></script>
-</head>
+  <body>
+    <div id="trailer"></div>
+    <nav>
+      <div id="nav-logo-section" class="nav-section">
+        <a href="./" class="test image-link">
+          <img class="logo" src="/images/logo.png" />
+        </a>
+      </div>
+      <div id="nav-link-section" class="nav-section">
+        <a href="./about" class="test">ABOUT</a>
+        <a href="javascript:window.location.reload();" class="test on">WORK</a>
+      </div>
+      <div id="nav-social-section" class="nav-section">
+        <a
+          href="https://www.linkedin.com/in/sumanhope"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="lab la-linkedin" style="font-size: 30px"></i>
+        </a>
+        <a
+          href="https://github.com/sumanhope"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="lab la-github" style="font-size: 30px"></i>
+        </a>
+        <a
+          href="https://instagram.com/potato_oc"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="lab la-instagram" style="font-size: 30px"></i>
+        </a>
+      </div>
+      <div id="nav-contact-section" class="nav-section">
+        <a href="./contact" class="test">GET IN TOUCH</a>
+      </div>
+    </nav>
 
-<body>
-  <div id="trailer">
-  </div>
-  <nav>
-    <div id="nav-logo-section" class="nav-section">
-      <a href="./" class="test image-link">
-        <img class="logo" src="/images/logo.png">
-      </a>
-    </div>
-    <div id="nav-link-section" class=" nav-section">
-      <a href="./about" class="test">ABOUT</a>
-      <a href="javascript:window.location.reload();" class="test on">WORK</a>
-    </div>
-    <div id="nav-social-section" class="nav-section">
-      <a href="#">
-        <i class="lab la-twitter" style="font-size:30px"></i>
-      </a>
-      <a href="#">
-        <i class="lab la-github" style="font-size:30px"></i>
-      </a>
-      <a href="#">
-        <i class="lab la-instagram" style="font-size:30px"></i>
-      </a>
-    </div>
-    <div id="nav-contact-section" class="nav-section">
-      <a href="./contact" class="test">GET IN TOUCH</a>
-    </div>
-  </nav>
+    <main>
+      <article data-index="0" data-status="active">
+        <div class="article-image-section article-section"></div>
+        <div class="test article-description-section article-section move-up">
+          <p>
+            <span class="magic">Food and Nutrition</span>, built with Flutter
+            and Firebase, offers User Management, Search, Nutritional
+            Information, Tracking, and Food List subsystems. It features dark
+            mode, hourly notifications, and enables users to access detailed
+            nutritional data, track calories, and manage their food choices for
+            healthier eating habits.
+          </p>
+        </div>
+        <a
+          href="https://github.com/sumanhope/about-lamjung"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="test info article-title-section article-section"
+        >
+          <div class="text-container">
+            <h2 class="default-text">FOOD AND NUTRITION</h2>
+            <h2 class="hover-text">SHOW PROJECT</h2>
+          </div>
+          <i class="la la-plus"></i>
+        </a>
 
-  <main>
-    <article data-index="0" data-status="active">
-      <div class="article-image-section article-section"></div>
-      <div class="article-description-section article-section">
-        <p>
-          <span class="magic">Food and Nutrition</span>, built with 
-          Flutter and Firebase, offers User Management, Search, Nutritional
-          Information, Tracking, and Food List subsystems. It features dark mode, hourly notifications, and enables
-          users to access detailed nutritional data, track calories, and manage their food choices for healthier eating
-          habits.
-        </p>
-      </div>
-      <div class="test info article-title-section article-section">
-        <h2>Food and Nutrition</h2>
-        <h2>Show Project</h2>
-        <i class="la la-plus"></i>
-      </div>
-
-      <div class="article-nav-section article-section">
-        <button class="test article-nav-button" type="button" onclick="handleLeftClick()">
-          <i class="la la-arrow-left" style="font-size:4rem;"></i>
-        </button>
-        <button class="test article-nav-button" type="button" onclick="handleRightClick()">
-          <i class="la la-arrow-right" style="font-size:4rem;"></i>
-        </button>
-      </div>
-    </article>
-    <article data-index="1" data-status="inactive">
-      <div class="article-image-section article-section"></div>
-      <div class="article-description-section article-section">
-        <p>
-
-        </p>
-      </div>
-      <div class="test article-title-section article-section">
-        <h2>Myagde Gaubikash</h2>
-        <h2>Show Project</h2>
-        <i class="la la-plus"></i>
-      </div>
-      <div class="article-nav-section article-section">
-        <button class="test article-nav-button" type="button" onclick="handleLeftClick()">
-          <i class="la la-arrow-left" style="font-size:4rem;"></i>
-        </button>
-        <button class="test article-nav-button" type="button" onclick="handleRightClick()">
-          <i class="la la-arrow-right" style="font-size:4rem;"></i>
-        </button>
-      </div>
-    </article>
-    <article data-index="2" data-status="inactive">
-      <div class="article-image-section article-section"></div>
-      <div class="article-description-section article-section">
-        <p>The neatest lighthouse you ever saw. Ehh, actually it's kind of messy. But that's why the pic is of the
-          outside.</p>
-      </div>
-      <div class="test article-title-section article-section">
-        <h2>About Lamjung</h2>
-        <h2>Show Project</h2>
-        <i class="la la-plus"></i>
-      </div>
-      <div class="article-nav-section article-section">
-        <button class="test article-nav-button" type="button" onclick="handleLeftClick()">
-          <i class="la la-arrow-left" style="font-size:4rem;"></i>
-        </button>
-        <button class="test article-nav-button" type="button" onclick="handleRightClick()">
-          <i class="la la-arrow-right" style="font-size:4rem;"></i>
-        </button>
-      </div>
-    </article>
-  </main>
-</body>
-
+        <div class="article-nav-section article-section">
+          <button
+            class="test article-nav-button"
+            type="button"
+            onclick="handleLeftClick()"
+          >
+            <i class="la la-arrow-left" style="font-size: 4rem"></i>
+          </button>
+          <button
+            class="test article-nav-button"
+            type="button"
+            onclick="handleRightClick()"
+          >
+            <i class="la la-arrow-right" style="font-size: 4rem"></i>
+          </button>
+        </div>
+      </article>
+      <article data-index="1" data-status="inactive">
+        <div class="article-image-section article-section"></div>
+        <div class="test article-description-section article-section move-up">
+          <p>
+            <span class="magic">Myagde Gaubikash</span> is your all-in-one city
+            app. Discover local schools and colleges, find job opportunities,
+            stay informed about future plans, access vital statistics, and get
+            quick help with emergency services. You can also learn about city
+            staff, explore our city's essence, file complaints, and enjoy
+            user-friendly management, all in one convenient app.
+          </p>
+        </div>
+        <a
+          href="https://github.com/sumanhope/about-lamjung"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="test article-title-section article-section"
+        >
+          <div class="text-container">
+            <h2 class="default-text">MYAGDE GAUBIKASH</h2>
+            <h2 class="hover-text">SHOW PROJECT</h2>
+          </div>
+          <i class="la la-plus"></i>
+        </a>
+        <div class="article-nav-section article-section">
+          <button
+            class="test article-nav-button"
+            type="button"
+            onclick="handleLeftClick()"
+          >
+            <i class="la la-arrow-left" style="font-size: 4rem"></i>
+          </button>
+          <button
+            class="test article-nav-button"
+            type="button"
+            onclick="handleRightClick()"
+          >
+            <i class="la la-arrow-right" style="font-size: 4rem"></i>
+          </button>
+        </div>
+      </article>
+      <article data-index="2" data-status="inactive">
+        <div class="article-image-section article-section"></div>
+        <div class="test article-description-section article-section move-up">
+          <p>
+            <span class="magic">About Lamjung</span> is your go-to app for
+            exploring the picturesque Lamjung region. Discover a curated list of
+            must-visit places, complete with user ratings to help you plan your
+            adventures. Feel free to contribute by adding your favorite spots,
+            which can be seamlessly linked to Google Maps for easy navigation.
+            Manage your user profile effortlessly and stay updated on Lamjung's
+            weather conditions. Don't forget to bookmark your top destinations
+            for quick access on your future visits to this breathtaking region.
+          </p>
+        </div>
+        <a
+          href="https://github.com/sumanhope/about-lamjung"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="test article-title-section article-section"
+        >
+          <div class="text-container">
+            <h2 class="default-text">ABOUT LAMJUNG</h2>
+            <h2 class="hover-text">SHOW PROJECT</h2>
+          </div>
+          <i class="la la-plus"></i>
+        </a>
+        <div class="article-nav-section article-section">
+          <button
+            class="test article-nav-button"
+            type="button"
+            onclick="handleLeftClick()"
+          >
+            <i class="la la-arrow-left" style="font-size: 4rem"></i>
+          </button>
+          <button
+            class="test article-nav-button"
+            type="button"
+            onclick="handleRightClick()"
+          >
+            <i class="la la-arrow-right" style="font-size: 4rem"></i>
+          </button>
+        </div>
+      </article>
+    </main>
+  </body>
 </html>
