@@ -18,7 +18,7 @@ const handleLeftClick = () => {
     nextSlide.dataset.status = "active";
     activeIndex = nextIndex;
   });
-}
+};
 
 const handleRightClick = () => {
   const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
@@ -34,7 +34,7 @@ const handleRightClick = () => {
     nextSlide.dataset.status = "active";
     activeIndex = nextIndex;
   });
-}
+};
 
 /* -- Mobile Nav Toggle -- */
 
@@ -44,14 +44,19 @@ const handleNavToggle = () => {
   nav.dataset.transitionable = "true";
 
   nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
-}
+};
 
-window.matchMedia("(max-width: 800px)").onchange = e => {
+window.matchMedia("(max-width: 800px)").onchange = (e) => {
   nav.dataset.transitionable = "false";
 
   nav.dataset.toggled = "false";
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.getElementById("nav-toggle");
+  const navLinks = document.getElementById("nav-links");
 
-
-
+  navToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+  });
+});
