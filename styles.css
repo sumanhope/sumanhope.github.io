@@ -1,0 +1,530 @@
+:root {
+  --background-color: rgb(6, 11, 25);
+  --border-color: rgb(255, 255, 255, 0.1);
+  --highlight-color: rgba(38, 26, 59, 0.607);
+  --yt-color: rgb(229, 57, 53);
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+
+  /* background: purple; */
+}
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  /* outline: 1px solid slategrey; */
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding: 12rem;
+  overflow-x: hidden;
+}
+header {
+  margin: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: var(--background-color);
+  z-index: 1;
+}
+
+body {
+  background-color: var(--background-color);
+}
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.navlinks {
+  flex: 1;
+  text-align: right;
+  margin: 20px;
+  margin-right: 60px;
+}
+
+.sidenavContainer {
+  display: none;
+}
+
+.navlinks ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+}
+.navlinks ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.sidenav {
+  height: 20px;
+  width: 20px;
+  display: none;
+}
+
+.logo {
+  flex-basis: 20%;
+  margin-left: 50px;
+  font-weight: 750;
+  font-size: 18px;
+  cursor: pointer;
+}
+.logo a {
+  font-family: "Space Grotesk", sans-serif;
+  text-decoration: none;
+  color: white;
+}
+#profile {
+  margin: 0 auto;
+  margin-top: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.topic p {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 43px;
+  font-weight: 900;
+  line-height: 45px;
+  overflow-y: hidden;
+}
+.description {
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  opacity: 50%;
+}
+.me {
+  height: 250px;
+  width: 250px;
+  animation: animate 12s ease-in-out infinite;
+  transition: all is ease-in-out;
+  animation-name: blob;
+  border: 3px solid;
+  box-shadow: 0px 6px 5px var(--highlight-color);
+}
+
+.blobImage1 {
+  display: none;
+}
+
+@keyframes blob {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 50% 30%/40% 50% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+.connectionIcon {
+  display: flex;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.connectionIcon img {
+  margin-right: 10px;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  height: 20px;
+  width: 20px;
+}
+.linked:hover {
+  transform: translateY(-3px);
+  opacity: 70%;
+}
+.github:hover {
+  transform: translateY(-3px);
+  opacity: 70%;
+}
+.topic {
+  padding-right: 100px;
+}
+
+.skill .react {
+  height: 27px;
+  width: 30px;
+}
+
+.skill {
+  margin-top: 90px;
+  margin-right: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.line {
+  border-left: 1px solid black;
+  height: 20px;
+  margin-left: 10px;
+  opacity: 40%;
+  margin-right: 30px;
+}
+.skillIcons .figma {
+  height: 24px;
+  width: 24px;
+}
+
+.skill img {
+  height: 26px;
+  width: 26px;
+  margin-left: 40px;
+}
+#aboutMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+  margin-right: 20px;
+
+  /* border: 1px solid red; */
+}
+.setup {
+  height: 300px;
+  width: 350px;
+  border-radius: 15px;
+  margin-left: 40px;
+}
+.about {
+  margin-left: 80px;
+}
+.circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background: rgb(242, 240, 235);
+  position: absolute;
+  margin-top: 200px;
+  margin-right: 100px;
+  z-index: 0;
+  overflow: hidden;
+}
+@keyframes roundabout {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.circle span {
+  position: absolute;
+  padding: 5px;
+  left: 50%;
+  transform-origin: 0 74px;
+  font-family: "Times New Roman", Times, serif;
+  color: var(--background-color);
+}
+.spiner {
+  font-size: 15px;
+  position: absolute;
+  animation: roundabout 10s linear infinite;
+  height: 100%;
+  width: 100%;
+}
+.icon {
+  position: absolute;
+  background: url(https://em-content.zobj.net/source/apple/354/man-technologist-medium-skin-tone_1f468-1f3fd-200d-1f4bb.png);
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.head1 {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--purple);
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.head2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.head3 {
+  opacity: 50%;
+  width: 360px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 15px;
+  line-height: 20px;
+  text-align: justify;
+}
+.head4 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+/* .project{
+    margin-top: 400px;
+} */
+#contact {
+  margin-top: 220px;
+  margin-bottom: 100px;
+  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.contactme {
+  display: flex;
+}
+.location,
+.email {
+  display: flex;
+  margin-right: 80px;
+}
+.location img,
+.email img {
+  height: 30px;
+  width: 30px;
+  margin-top: 0px;
+  margin-right: 30px;
+}
+.info {
+  font-size: 14px;
+  line-height: 0px;
+  font-weight: bold;
+}
+footer {
+  width: 100%;
+  padding-right: 1px;
+  z-index: 0;
+}
+.footer {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+.footer p {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Space Grotesk", sans-serif;
+  margin-right: 480px;
+}
+
+/* project Section */
+
+#project {
+  /* margin: 0 10% 0 10%; */
+  margin-top: 250px;
+  /* border : 1px solid blue; */
+  width: 100%;
+  position: relative;
+  transition-timing-function: ease;
+  transition-duration: 300ms;
+}
+
+.project--Invent {
+  /* border : 1px solid purple; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* .projectMainContainer{
+  
+} */
+
+.projectContainer {
+  display: flex;
+  margin-top: 50px;
+}
+
+.projectFeatures--head3 {
+  opacity: 70%;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 15px;
+  line-height: 20px;
+}
+
+.projectImageContainer1 {
+  height: 280px;
+  width: 300px;
+  margin-right: 80px;
+  background-color: var(--background-color);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.projectImageStyle1 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.projectImageContainer2 {
+  height: 280px;
+  width: 300px;
+  margin-left: 80px;
+  background-color: var(--background-color);
+}
+
+.projectDescription {
+  height: 280px;
+  width: 250px;
+  /* border : 2px solid red; */
+  text-align: center;
+  /* margin-top: ; */
+}
+
+.project--head1 {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--purple);
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.project--head2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.projectFeatures--head3 {
+  margin-top: 20px;
+}
+
+.projectHeading {
+  font-weight: bold;
+  margin-right: 180px;
+}
+
+.projectTopic {
+  font-weight: bold;
+}
+
+.buttonContainer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showProjects,
+.hideProjects {
+  padding: 10px 10px 10px 10px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0px 15px 20px rgb(0, 0, 0, 0.1);
+  transition-timing-function: ease;
+  transition-duration: 300ms;
+  width: 120px;
+  text-align: center;
+}
+
+.hideProjects {
+  display: none;
+}
+
+.Show {
+  overflow: hidden;
+  height: 0;
+}
+
+.hideButtonLink {
+  text-decoration: none;
+  color: white;
+}
+
+.showProjects:hover,
+.hideProjects:hover {
+  transform: translateY(-5px);
+}
+
+.langUsed1 {
+  margin-top: 25px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.langUsed2 {
+  margin-top: 25px;
+  font-size: 14px;
+  position: relative;
+}
+
+.githubIcon {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+}
+
+.shareIcon {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+}
+
+.space1 {
+  margin-left: 40px;
+}
+.space {
+  margin-left: 50px;
+}
+
+.decoration {
+  text-decoration: none;
+}
+
+.ProjectDetails {
+  margin-top: 30px;
+}
+
+/* project Image */
+
+/* floating Icon */

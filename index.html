@@ -2,120 +2,354 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Suman Shrestha</title>
-
-    <link rel="stylesheet" href="css/style.css" />
-
+    <link rel="shortcut icon" type="x-icon" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
     />
-    <script src="scripts/main.js"></script>
-    <script src="scripts/trailer.js"></script>
-    <script src="scripts/texteffect.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
     </style>
   </head>
-
   <body>
-    <div id="trailer">
-      <!-- <span id="trailer-text"></span> -->
-    </div>
-    <nav>
-      <div id="nav-logo-section" class="nav-section">
-        <a href="javascript:window.location.reload();" class="test image-link">
-          <h2 class="test magic">Suman Shrestha</h2>
-        </a>
-      </div>
-      <div id="nav-link-section" class="nav-section">
-        <a href="./about" class="test">ABOUT</a>
-        <a href="./work" class="test">WORK</a>
-      </div>
-      <div id="nav-social-section" class="nav-section">
-        <a
-          href="https://www.linkedin.com/in/sumanhope"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="lab la-linkedin" style="font-size: 30px"></i>
-        </a>
-        <a
-          href="https://github.com/sumanhope"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="lab la-github" style="font-size: 30px"></i>
-        </a>
-        <a
-          href="https://instagram.com/potato_oc"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="lab la-instagram" style="font-size: 30px"></i>
-        </a>
-      </div>
-      <div id="nav-contact-section" class="nav-section">
-        <a href="./contact" class="test">GET IN TOUCH</a>
-      </div>
-    </nav>
+    <div class="main">
+      <header class="head">
+        <nav class="nav">
+          <div class="logo"><a href="#">sumanhope</a></div>
+          <div class="navlinks">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#aboutMe">About</a></li>
+              <li><a href="#project">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <img class="sidenav" src="images/menu.png" onclick="closeNav()" />
+        </nav>
+      </header>
 
-    <main>
-      <article data-index="0" data-status="active">
-        <div class="articleindex-image-section article-section"></div>
-        <a
-          href="./contact"
-          data-hover="Contact"
-          class="test article-description-section article-section move-up"
-        >
-          <img class="hand" src="images/hand.png" />
-          <p>
-            Hello there! I am Suman Shrestha, a passionate
-            <span class="magic">application developer</span>
-            specializing in <span class="magic">Flutter</span>. With a keen eye
-            for <span class="magic">design</span>, I delve into the realms of
-            <span class="magic">UI/UX</span> to create seamless and visually
-            appealing user experiences. <br />
-            My expertise extends beyond <span class="magic">Flutter</span>,
-            encompassing a diverse skill set that includes
-            <span class="magic">Figma</span>, <span class="magic">Unity</span>,
-            <span class="magic">Web Development</span>,
-            <span class="magic">Firebase</span>.
+      <sidenav class="sidenavContainerParent">
+        <div class="sidenavContainer">
+          <ul class="sidenavElements">
+            <li class="closePageTransition" onclick="closeNav()">
+              <a href="#">Home</a>
+            </li>
+            <li onclick="closeNav()"><a href="#aboutMe">About</a></li>
+            <li onclick="closeNav()"><a href="#project">Projects</a></li>
+            <li onclick="closeNav()"><a href="#contact">Contact</a></li>
+            <li class="closeSidenav closePageTransition" onclick="closeNav()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                  d="m8.464 15.535l7.072-7.07m-7.072 0l7.072 7.07"
+                />
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </sidenav>
+
+      <section id="profile">
+        <div class="blobImage1">
+          <img class="me" src="images/profile.jpg" />
+        </div>
+
+        <div class="topic">
+          <p class="title1">Flutter Developer 👋🏼</p>
+
+          <div class="description">
+            Hi, I'm Suman Shrestha. A passionate Flutter Developer based<br
+              class="break"
+            />
+            in Kathmandu, Nepal.
+          </div>
+
+          <div class="connectionIcon">
+            <a href="https://www.linkedin.com/in/sumanhope/" target="_blank">
+              <i class="lab la-linkedin" style="font-size: 25px"></i>
+            </a>
+            <a href="https://github.com/sumanhope" target="_blank">
+              <i class="lab la-github" style="font-size: 25px"></i>
+            </a>
+            <a href="https://instagram.com/potato_oc" target="_blank">
+              <i class="lab la-instagram" style="font-size: 25px"></i>
+            </a>
+          </div>
+        </div>
+        <div class="blobImage">
+          <img class="me" src="images/profile.jpg" />
+        </div>
+      </section>
+
+      <div class="skill">
+        <p>Tech Stack</p>
+        <div class="line"></div>
+        <div class="skillIcons">
+          <img class="html" src="images/flutter-colored.svg" />
+          <img class="" src="images/firebase-colored.svg" />
+          <img class="" src="images/dart-colored.svg" />
+          <img class="react" src="images/React-icon.svg.png" alt="" />
+          <img class="" src="images/html5-colored.svg" alt="" />
+          <img class="figma" src="images/figma.png" alt="" />
+        </div>
+      </div>
+
+      <section id="aboutMe">
+        <div class="circle">
+          <div class="icon"></div>
+          <div class="spin">
+            <p class="spiner">FLUTTER DEVELOPER</p>
+          </div>
+        </div>
+        <div class="aboutBack">
+          <img class="setup" src="images/pc-setup.jpg" />
+        </div>
+        <div class="about">
+          <p class="head1">ABOUT ME</p>
+          <p class="head2">
+            I am a passionate Flutter Developer<br />
+            hailing from Nepal.
           </p>
-        </a>
-        <a
-          href="./about"
-          data-hover="About"
-          class="test article-title-section article-section"
-        >
-          <div class="text-container">
-            <h2 class="default-text">FLUTTER DEVELOPER</h2>
-            <h2 class="hover-text">UI/UX</h2>
-          </div>
-          <!-- <h2 data-value="Flutter Developer">Flutter Developer</h2>
-        <h2>UI/UX</h2> -->
-          <i class="la la-plus"></i>
-        </a>
+          <p class="head3">
+            As a fresher in the industry, I have immersed myself in the world of
+            Flutter for over a year, honing my skills and building innovative
+            mobile applications. I am dedicated to creating captivating user
+            interfaces and seamless user experiences that leave a lasting
+            impression. By combining my technical expertise with a keen eye for
+            design, I strive to craft visually appealing and functional
+            applications.
+            <br />
+            I am excited to collaborate with fellow developers and contribute to
+            the ever-evolving world of mobile app development. Let's create
+            something remarkable together!
+          </p>
+        </div>
+      </section>
 
-        <a
-          href="./work"
-          data-hover="Work"
-          class="test article-title-section article-section work-section"
-        >
-          <div class="text-container">
-            <h2 class="default-text">WORK</h2>
-            <h2 class="hover-text">CLICK</h2>
+      <section id="project">
+        <div class="project--Invent">
+          <div class="projectHeading">
+            <p class="project--head1">PORTFOLIO</p>
+            <div class="project--head2">
+              Each Project is a one-of-a-kind chapter in development. 🕸️
+            </div>
           </div>
-          <i class="la la-arrow-right" style="font-size: 4rem"></i>
-        </a>
-      </article>
-    </main>
+          <div class="projectMainContainer">
+            <!-- project 1 -->
+
+            <div class="projectContainer project1">
+              <div class="projectImageContainer1">
+                <img
+                  class="projectImageStyle1"
+                  src="images/foodandnutrition.svg"
+                />
+              </div>
+              <div class="projectDescription">
+                <div class="ProjectDetails">
+                  <p class="projectTopic">Food and Nutrition 🥑</p>
+                  <div class="projectFeatures--head3">
+                    This app offers User Management, Search, Nutritional
+                    Information, Tracking, and Food List subsystems. It features
+                    dark mode, hourly notifications, and enables users to access
+                    detailed nutritional data, track calories, and manage their
+                    food choices for healthier eating habits.
+                  </div>
+                  <div class="langUsed1">
+                    <span>Flutter</span> <span class="space1">Firebase</span>
+                  </div>
+                  <div class="langUsed2">
+                    <span
+                      >Code
+                      <a
+                        class="decoration"
+                        href="https://github.com/sumanhope/Food-and-Nutrition"
+                        target="_blank"
+                      >
+                        <i
+                          class="lab la-github"
+                          style="font-size: 20px"
+                        ></i> </a></span
+                    ><span class="space"
+                      >Download App
+                      <a
+                        href="https://drive.google.com/drive/folders/15eEk4a_L4gj5P5TeMBDZg3iMOQx97tB5?usp=drive_link"
+                        target="_blank"
+                      >
+                        <i
+                          class="las la-download"
+                          style="font-size: 20px"
+                        ></i> </a
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="Show">
+              <!-- project 2 -->
+
+              <div class="projectContainer project2">
+                <div class="projectDescription">
+                  <div class="ProjectDetails">
+                    <p class="projectTopic">Myagde Gaubikash 🏢</p>
+                    <div class="projectFeatures--head3">
+                      Your all-in-one city app, Discover local schools and
+                      colleges, find job opportunities, stay informed about
+                      future plans, access vital statistics, and get quick help
+                      with emergency services.
+                    </div>
+                    <div class="langUsed1">
+                      <span>Flutter</span>
+                      <span class="space1">Firebase</span>
+                    </div>
+                    <div class="langUsed2">
+                      <span
+                        >Code<a
+                          class="decoration"
+                          href="https://github.com/sumanhope/RuralApp"
+                          target="_blank"
+                        >
+                          <i class="lab la-github" style="font-size: 20px"></i>
+                        </a> </span
+                      ><span class="space"
+                        >Download App
+                        <a
+                          href="https://drive.google.com/drive/folders/1t-cQkExIjpfhhPprm4ZhRrS18fZP6H_m?usp=drive_link"
+                          target="_blank"
+                        >
+                          <i
+                            class="las la-download"
+                            style="font-size: 20px"
+                          ></i></a
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="projectImageContainer2">
+                  <img class="projectImageStyle1" src="images/rural.svg" />
+                </div>
+              </div>
+
+              <!-- project 3 -->
+
+              <div class="projectContainer project1">
+                <div class="projectImageContainer1">
+                  <img class="projectImageStyle1" src="images/RoomRental.png" />
+                </div>
+                <div class="projectDescription">
+                  <div class="ProjectDetails">
+                    <p class="projectTopic">Room Rental 🏠</p>
+                    <div class="projectFeatures--head3">
+                      Room Rental is a website made for users who are in need of
+                      renting rooms with facilities prior to thier budget and
+                      location.
+                    </div>
+                    <div class="langUsed1">
+                      <span>React</span>
+                      <span class="space1">TailWind Css</span>
+                    </div>
+                    <div class="langUsed2">
+                      <span
+                        >Code
+                        <a
+                          class="decoration"
+                          href="https://github.com/sumanhope/room-rental"
+                          target="_blank"
+                        >
+                          <i
+                            class="lab la-github"
+                            style="font-size: 20px"
+                          ></i> </a></span
+                      ><span class="space"
+                        >Project Demo
+                        <a
+                          href="https://roomrentalnpr.web.app/"
+                          target="_blank"
+                        >
+                          <i
+                            class="las la-external-link-alt"
+                            style="font-size: 20px"
+                          ></i> </a
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- show more and less -->
+            </div>
+            <div class="buttonContainer">
+              <div class="showProjects" onclick="{showHandler()}">
+                More Projects...
+              </div>
+              <a class="hideButtonLink" href="#project"
+                ><div class="hideProjects" onclick="{hideHandler()}">
+                  Hide Projects...
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="head1">CONTACT</div>
+        <div class="head4">Don't be shy! Hit me up! 🎈</div>
+        <div class="contactBox">
+          <div class="contactme">
+            <div class="location">
+              <img src="images/location.png" />
+              <div class="address">
+                <p class="info">Location</p>
+                <p class="description">Kathmandu, Nepal</p>
+              </div>
+            </div>
+            <div class="email">
+              <a href="mailto:sumansthahope@gmail.com">
+                <img src="images/email.png" />
+              </a>
+              <div class="mail">
+                <p class="info">Mail</p>
+                <p class="description">sumansthahope@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Copyright © 2023. All rights are reserved</p>
+      </footer>
+    </div>
+
+    <script src="myscripts.js"></script>
   </body>
+
+  <script>
+    const closeNav = () => {
+      document.querySelector(".sidenavContainer").classList.toggle("eliminate");
+    };
+  </script>
 </html>
