@@ -5,5 +5,4 @@ I'm excited to share with you a portfolio that I've been working on, inspired by
 This project has been a great learning experience for me, and I hope I've done justice to the original inspiration. Full credit goes to Stefan Topalovic for his amazing creativity and talent.
 
 Feel free to check out CodingPhase video I was talking about which I have linked below:
-
-https://www.youtube.com/watch?v=VjiWpGR82t0&t=117s
+[Youtube Video](https://www.youtube.com/watch?v=VjiWpGR82t0&t=117s)
