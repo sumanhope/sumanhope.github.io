@@ -450,7 +450,7 @@ footer {
 .hideProjects {
   padding: 10px 10px 10px 10px;
   border-radius: 20px;
-  background-color: black;
+  background-color: var(--purple);
   color: white;
   font-size: 13px;
   cursor: pointer;
