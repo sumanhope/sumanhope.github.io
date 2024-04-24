@@ -7,6 +7,7 @@ import {
   SiGithub,
   SiNodedotjs,
   SiReact,
+  SiLocal,
 } from "react-icons/si";
 import Title from "./Title";
 import Link from "next/link";
@@ -18,29 +19,36 @@ export default function Project() {
     {
       title: "Food and Nutrition",
       tech: [SiFlutter, SiDart, SiFirebase, SiFigma, SiGithub],
-      link: "./foodandnutrition.apk",
-      cover: "./foodandnutrition.jpg",
+      link: "./apk/foodandnutrition.apk",
+      cover: "./image/foodandnutrition.jpg",
       background: "bg-violet-700",
     },
     {
       title: "myFarm",
       tech: [SiFlutter, SiDart, SiFirebase, SiFigma, SiGithub],
-      link: "./myFarm.apk",
-      cover: "./myfarm.jpg",
+      link: "./apk/myFarm.apk",
+      cover: "./image/myfarm.jpg",
+      background: "bg-green-600",
+    },
+    {
+      title: "Random Password",
+      tech: [SiFlutter, SiDart, SiLocal, SiFigma, SiGithub],
+      link: "./apk/RandomPassword.apk",
+      cover: "./image/randompassword.jpg",
       background: "bg-green-600",
     },
     {
       title: "Myagde Gaubikash",
       tech: [SiFlutter, SiDart, SiFirebase, SiFigma, SiGithub],
-      link: "./rural.apk",
-      cover: "./rural1.jpg",
-      background: "bg-green-600",
+      link: "./apk/rural.apk",
+      cover: "./image/rural1.jpg",
+      background: "bg-violet-600",
     },
     {
       title: "Room Rental",
       tech: [SiReact, SiNodedotjs, SiFirebase, SiFigma, SiGithub],
       link: "https://roomrentalnpr.web.app/",
-      cover: "./roomrental.jpg",
+      cover: "./image/roomrental.jpg",
       background: "bg-violet-600",
     },
   ];
